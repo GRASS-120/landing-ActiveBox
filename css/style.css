@@ -1,0 +1,459 @@
+.all {
+  font-family: 'Raleway', sans-serif;
+  font-family: 'Cardo', serif;
+  font-family: 'Open Sans', sans-serif;
+  color: #E84545;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+.banner {
+  height: 750px;
+  width: 100%;
+  background-image: url(../img/banner.jpg);
+}
+
+.banner .header {
+  height: 100px;
+  width: 100%;
+  border-bottom: 1px solid grey;
+  display: flex;
+  justify-content: space-between;
+}
+
+.banner .header-title {
+  padding-top: 38px;
+  height: 100%;
+}
+
+.banner .header-list {
+  padding-top: 38px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.banner .header-list-item {
+  padding-right: 55px;
+  white-space: pre;
+}
+
+.banner .header-list-item:last-child {
+  padding-right: 0;
+}
+
+.banner .header-list-item p {
+  font-size: 13px;
+  font-weight: bold;
+  color: white;
+  opacity: 0.7;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.banner .header-list-item p:hover {
+  opacity: 1;
+}
+
+.banner .masthead {
+  width: 90%;
+  margin: 135px auto;
+}
+
+.banner .masthead-title {
+  font-size: 65px;
+  font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  width: 50%;
+}
+
+.banner .masthead-subtitle {
+  font-size: 22px;
+  font-weight: regular;
+  color: white;
+}
+
+.banner .masthead-btn {
+  margin: 75px auto;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 15px 50px 15px 50px;
+}
+
+.features {
+  width: 100%;
+  height: 460px;
+  margin-top: 120px;
+  margin-bottom: 120px;
+}
+
+.features div .features-line-1 {
+  margin-bottom: 60px;
+}
+
+.features div .features-line-1, .features div .features-line-2 {
+  display: flex;
+  justify-content: center;
+}
+
+.features div .features-line-1 .features-item, .features div .features-line-2 .features-item {
+  height: 200px;
+  width: 33%;
+}
+
+.features div .features-line-1 .features-item-text, .features div .features-line-2 .features-item-text {
+  width: 100%;
+  height: 40%;
+  float: left;
+}
+
+.features div .features-line-1 .features-item-text p, .features div .features-line-2 .features-item-text p {
+  font-size: 13px;
+  font-weight: regular;
+  color: #333;
+}
+
+.features div .features-line-1 .features-item-title, .features div .features-line-2 .features-item-title {
+  width: 100%;
+  height: 60%;
+  float: left;
+}
+
+.features div .features-line-1 .features-item-title p, .features div .features-line-2 .features-item-title p {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  padding-top: 30px;
+}
+
+.features div .features-line-1 .features-item-title img, .features div .features-line-2 .features-item-title img {
+  display: block;
+  margin: 0 auto;
+}
+
+.works {
+  height: 700px;
+  width: 100%;
+  margin-bottom: 100px;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.works .container-fluid {
+  padding: 0;
+}
+
+.works-item-1 {
+  width: 25%;
+  height: 50%;
+  background: green;
+  background-image: url(../img/work-1.jpg);
+  transition: 0.2s;
+}
+
+.works-item-2 {
+  width: 25%;
+  height: 50%;
+  background: green;
+  background-image: url(../img/work-2.jpg);
+  transition: 0.2s;
+}
+
+.works-item-3 {
+  width: 25%;
+  height: 50%;
+  background: green;
+  background-image: url(../img/work-3.jpg);
+  transition: 0.2s;
+}
+
+.works-item-4 {
+  width: 25%;
+  height: 50%;
+  background: green;
+  background-image: url(../img/work-4.jpg);
+  transition: 0.2s;
+}
+
+.works-item-5 {
+  width: 25%;
+  height: 50%;
+  background: green;
+  background-image: url(../img/work-5.jpg);
+  transition: 0.2s;
+}
+
+.works-item-6 {
+  width: 25%;
+  height: 50%;
+  background: green;
+  background-image: url(../img/work-6.jpg);
+  transition: 0.2s;
+}
+
+.works-item-7 {
+  width: 25%;
+  height: 50%;
+  background: green;
+  background-image: url(../img/work-7.jpg);
+  transition: 0.2s;
+}
+
+.works-item-8 {
+  width: 25%;
+  height: 50%;
+  background: green;
+  background-image: url(../img/work-8.jpg);
+  transition: 0.2s;
+}
+
+.team {
+  height: 580px;
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+.team div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.team div .teamate {
+  width: 23.5%;
+  height: 580px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.team div .teamate-photo {
+  width: 100%;
+  height: 270px;
+}
+
+.team div .teamate-photo img {
+  width: 100%;
+  height: 100%;
+}
+
+.team div .teamate-shortinf {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.team div .teamate-shortinf-name {
+  font-size: 22px;
+  font-weight: regular;
+  color: #333;
+}
+
+.team div .teamate-shortinf-job {
+  font-size: 13px;
+  font-weight: regular;
+  color: #E84545;
+}
+
+.team div .teamate-inf {
+  font-size: 14px;
+  font-weight: regular;
+  color: #333;
+}
+
+.team div .teamate-links {
+  width: 120px;
+  height: 40px;
+}
+
+.team div .teamate-links div {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid silver;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.team div .teamate-links div:hover {
+  background-color: #E84545;
+  border: 1px solid #E84545;
+}
+
+.team div .teamate-links div img {
+  width: 50%;
+  height: 50%;
+}
+
+.clients {
+  width: 100%;
+  height: 500px;
+  margin-bottom: 100px;
+  display: flex;
+  background-color: #53354A;
+}
+
+.clients-img {
+  height: 100%;
+  width: 50%;
+}
+
+.clients-img img {
+  height: 100%;
+  width: 100%;
+}
+
+.clients-comment {
+  height: 100%;
+  width: 45%;
+  margin: 100px 0 100px 85px;
+}
+
+.clients-comment-text {
+  font-size: 36px;
+  font-weight: light;
+  color: white;
+  font-family: 'Cardo', serif;
+  font-style: italic;
+}
+
+.clients-comment-author {
+  font-size: 13px;
+  font-weight: bold;
+  color: white;
+}
+
+.download {
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+  margin-bottom: 100px;
+}
+
+.download div div .download-title {
+  font-size: 28px;
+  font-weight: light;
+  color: #333;
+}
+
+.download div div .download-subtitle {
+  font-size: 13px;
+  font-weight: bold;
+  color: #333;
+}
+
+.download div div .download-btn {
+  margin: 40px auto;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 15px 50px 15px 50px;
+}
+
+.footer {
+  width: 100%;
+  height: 350px;
+}
+
+.footer .footer-box-1 {
+  background-color: #3A3E64;
+  width: 100%;
+  height: 255px;
+}
+
+.footer .footer-box-1 div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer .footer-box-1 div .footer-box-1-location, .footer .footer-box-1 div .footer-box-1-about {
+  width: 325px;
+  height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.footer .footer-box-1 div .footer-box-1-location p, .footer .footer-box-1 div .footer-box-1-about p {
+  margin: 0;
+  text-align: center;
+}
+
+.footer .footer-box-1 div .footer-box-1-location-title, .footer .footer-box-1 div .footer-box-1-about-title {
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  padding-bottom: 15px;
+}
+
+.footer .footer-box-1 div .footer-box-1-location-subtitle, .footer .footer-box-1 div .footer-box-1-about-subtitle {
+  font-size: 14px;
+  font-weight: regular;
+  color: silver;
+}
+
+.footer .footer-box-1 div .footer-box-1-share {
+  width: 135px;
+  height: 75px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 68px;
+}
+
+.footer .footer-box-1 div .footer-box-1-share p {
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+}
+
+.footer .footer-box-1 div .footer-box-1-share-links {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.footer .footer-box-1 div .footer-box-1-share-links div {
+  width: 38px;
+  height: 38px;
+  border: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.footer .footer-box-1 div .footer-box-1-share-links div:hover {
+  background-color: #E84545;
+  border: 2px solid #E84545;
+}
+
+.footer .footer-box-1 div .footer-box-1-share-links div img {
+  height: 50%;
+  width: 50%;
+}
+
+.footer .footer-box-2 {
+  width: 100%;
+  height: 95px;
+  background-color: #313454;
+}
+
+.footer .footer-box-2 div p {
+  padding-top: 25px;
+  font-size: 14px;
+  font-weight: regular;
+  color: silver;
+}
+
+.footer .footer-box-2 div p span {
+  color: white;
+}

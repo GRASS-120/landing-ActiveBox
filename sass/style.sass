@@ -1,0 +1,361 @@
+.all  
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Cardo', serif;
+    font-family: 'Open Sans', sans-serif;
+
+    color: #E84545
+    
+// -mixins- //
+
+@mixin text($s, $w, $c)
+    font-size: $s
+    font-weight: $w
+    color: $c
+
+// -/mixin- //
+    
+// -common- //
+
+body
+    padding: 0
+    margin: 0
+    font-family: 'Raleway', sans-serif;
+
+// -/common- //
+
+// -banner- //
+
+.banner
+    height: 750px
+    width: 100%
+    background-image: url(../img/banner.jpg)
+
+    .header
+        height: 100px
+        width: 100%
+        border-bottom: 1px solid grey
+        display: flex
+        justify-content: space-between
+
+        &-title
+            padding-top: 38px 
+            height: 100%
+
+        &-list
+            padding-top: 38px 
+            height: 100%
+            display: flex
+            justify-content: space-between
+
+            &-item
+                padding-right: 55px
+                white-space: pre
+
+                &:last-child
+                    padding-right: 0
+
+                p
+                    font-size: 13px
+                    font-weight: bold
+                    color: white
+                    opacity: 0.7
+                    cursor: pointer
+                    transition: 0.2s
+
+                    &:hover
+                        opacity: 1
+
+    .masthead
+        width: 90%
+        margin: 135px auto
+        &-title
+            font-size: 65px
+            font-weight: bold
+            font-family: 'Open Sans', sans-serif;
+            color: white
+            width: 50%
+
+        &-subtitle
+            font-size: 22px
+            font-weight: regular
+            color: white
+
+        &-btn
+            margin: 75px auto
+            font-size: 13px
+            font-weight: bold
+            padding: 15px 50px 15px 50px
+
+// -/baner- //
+
+// -features- //
+
+.features
+    width: 100%
+    height: 460px
+    margin-top: 120px
+    margin-bottom: 120px
+
+    div
+        .features-line-1
+            margin-bottom: 60px
+
+        .features-line-1, .features-line-2
+            display: flex
+            justify-content: center
+
+            .features-item
+                height: 200px
+                width: 33%
+
+                &-text
+                    width: 100%
+                    height: 40%
+                    float: left
+
+                    p
+                        @include text(13px, regular, #333)
+
+                &-title
+                    width: 100%
+                    height: 60%
+                    float: left
+
+                    p
+                        @include text(14px, bold, #333)
+                        padding-top: 30px
+
+                    img
+                        display: block
+                        margin: 0 auto
+
+// -/features- //
+
+// -works //
+
+.works
+    height: 700px
+    width: 100%
+    margin-bottom: 100px
+    background-color: red
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+
+    .container-fluid
+        padding: 0
+
+    @for $i from 1 to 9
+        &-item-#{$i}
+            width: 25%
+            height: 50%
+            background: green 
+            background-image: url(../img/work-#{$i}.jpg)
+            transition: 0.2s
+
+// -/works //
+
+// -team //
+
+.team
+    height: 580px
+    width: 100%
+    margin-bottom: 100px
+
+    div
+        display: flex
+        justify-content: space-between
+
+        .teamate
+            width: 23.5%
+            height: 580px
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+
+            &-photo
+                width: 100%
+                height: 270px
+
+                img
+                    width: 100%
+                    height: 100%
+
+            &-shortinf
+                width: 100%
+                display: flex
+                flex-direction: column
+
+                &-name
+                    @include text(22px, regular, #333)
+
+                &-job
+                    @include text(13px, regular, #E84545)
+
+            &-inf
+                @include text(14px, regular, #333)
+
+            &-links
+                width: 120px
+                height: 40px
+
+                div
+                    width: 40px
+                    height: 40px
+                    display: flex;
+                    align-items: center;
+                    justify-content: center
+                    border: 1px solid silver
+                    transition: 0.2s
+                    cursor: pointer
+
+                    &:hover
+                        background-color: #E84545
+                        border: 1px solid #E84545
+
+                    img
+                       width: 50%
+                       height: 50%
+
+// -/team- //
+
+// -clients- //
+
+.clients
+    width: 100%
+    height: 500px
+    margin-bottom: 100px
+    display: flex
+    background-color: #53354A
+
+    &-img
+        height: 100%
+        width: 50%
+
+        img
+            height: 100%
+            width: 100%
+
+    &-comment
+        height: 100%
+        width: 45%
+        margin: 100px 0 100px 85px
+
+        &-text
+            @include text(36px, light, white)
+            font-family: 'Cardo', serif;
+            font-style: italic
+
+        &-author
+            @include text(13px, bold, white)
+
+// -/clients //
+
+// -download- //
+
+.download
+    margin: 0 auto
+    width: 100%
+    height: auto
+    margin-bottom: 100px
+
+    div
+        div
+
+            .download-title
+                @include text(28px, light, #333)
+
+            .download-subtitle
+                @include text(13px, bold, #333)
+                
+            
+            .download-btn
+                margin: 40px auto
+                font-size: 13px
+                font-weight: bold
+                padding: 15px 50px 15px 50px
+
+// -/download- //  
+
+// -footer- //  
+
+.footer
+    width: 100%
+    height: 350px
+
+    .footer-box-1
+        background-color: #3A3E64
+        width: 100%
+        height: 255px
+
+        div
+            display: flex
+            justify-content: space-between
+
+            .footer-box-1-location, .footer-box-1-about
+                width: 325px
+                height: 170px
+                display: flex
+                flex-direction: column
+                justify-content: center
+                margin-top: 25px
+
+                p
+                    margin: 0
+                    text-align: center
+
+                &-title
+                    @include text(14px, bold, white)
+                    padding-bottom: 15px
+
+                &-subtitle
+                    @include text(14px, regular, silver)
+
+            .footer-box-1-share
+                width: 135px
+                height: 75px
+                display: flex
+                flex-direction: column
+                margin-top: 68px
+
+                p
+                    @include text(14px, bold, white)
+
+                &-links
+                    display: flex
+                    justify-content: space-between
+                    flex-direction: row
+
+                    div
+                        width: 38px
+                        height: 38px
+                        border: 2px solid white
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        transition: 0.2s
+                        cursor: pointer
+
+                        &:hover
+                            background-color: #E84545
+                            border: 2px solid #E84545
+
+                        img
+                            height: 50%
+                            width: 50%
+
+    .footer-box-2
+        width: 100%
+        height: 95px
+        background-color: #313454
+
+        div
+            
+            p
+                padding-top: 25px
+                @include text(14px, regular, silver)
+
+                span
+                    color: white
+
+// -/footer //   
