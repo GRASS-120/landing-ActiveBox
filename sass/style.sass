@@ -13,6 +13,12 @@
     color: $c
 
 // -/mixin- //
+
+// -animation- //
+
+
+
+// -/animation- //    
     
 // -common- //
 
@@ -137,7 +143,6 @@ body
     height: 700px
     width: 100%
     margin-bottom: 100px
-    background-color: red
     display: flex
     justify-content: center
     flex-wrap: wrap
@@ -145,13 +150,33 @@ body
     .container-fluid
         padding: 0
 
-    @for $i from 1 to 9
-        &-item-#{$i}
-            width: 25%
-            height: 50%
-            background: green 
-            background-image: url(../img/work-#{$i}.jpg)
-            transition: 0.2s
+    div
+        width: 25%
+        height: 50%
+        transition: 0.5s
+        overflow: hidden
+
+        @for $i from 1 to 9
+            .works-item-#{$i}
+                width: 100%
+                height: 100%
+                transition: 0.5s
+                background-image: url(../img/work-#{$i}.jpg)
+
+                &:hover
+                    transform: scale(1.3)
+
+                    &::before
+                        content: 'PROJECT NAME'
+                        background-color: #E84545
+                        @include text(16px, bold, white)
+                        opacity: 0.9
+                        display: block
+                        text-align: center
+                        width: 100%
+                        height: 100%
+                        transition: 0.3s
+                        padding-top: 42%
 
 // -/works //
 
