@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Cardo:400,400i,700|Open+Sans:400,600,700,800|
     Raleway:300,400,500,600,700,800,900&display=swap&subset=cyrillic,cyrillic-ext" rel="stylesheet">
     <link rel="stylesheet" href="./libs/bootstrap.css">
+    <link rel="stylesheet" href="./libs/animate.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>ActiveBox</title>
 </head>
@@ -15,7 +16,7 @@
         <div class="section-inner container">
             <section class="header container-fluid">
                 <div class="header-title col-md-5">
-                    <img src="./img/logo.png">
+                    <img src="./img/logo.png" class="lazyload">
                 </div>
                 <div class="header-list col-md-7">
                     <div class="header-list-item nav-item" id="header-list-item-features"><p>FEATURES</p></div>
@@ -112,28 +113,28 @@
 
     <section class="works">
         <div>
-            <div class="works-item-1"></div>
+            <div class="works-item-1 wow fadeIn" data-wow-duration="1s"></div>
         </div>
         <div>
-            <div class="works-item-2"></div>            
+            <div class="works-item-2 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s"></div>            
         </div>
         <div>
-            <div class="works-item-3"></div>            
+            <div class="works-item-3 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.25s"></div>            
         </div>
         <div>
-            <div class="works-item-4"></div>            
+            <div class="works-item-4 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s"></div>            
         </div>
         <div>
-            <div class="works-item-5"></div>            
+            <div class="works-item-5 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s"></div>            
         </div>
         <div>
-            <div class="works-item-6"></div>            
+            <div class="works-item-6 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.45s"></div>            
         </div>
         <div>
-            <div class="works-item-7"></div>            
+            <div class="works-item-7 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s"></div>            
         </div>
         <div>
-            <div class="works-item-8"></div>            
+            <div class="works-item-8 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.35s"></div>            
         </div>
     </section>
 
@@ -258,7 +259,7 @@
             <div class="row">
                 <p class="download-title col-md-12 text-center">Are You Ready to Start? Download Now For Free!</p>
                 <p class="download-subtitle col-md-12 text-center">FUSCE DAPIBUS, TELLUS AC CURSUS COMMODO</p>
-                <a href="#" class="download-btn btn btn-danger text-center">DOWNLOAD HERE</a>
+                <a href="#" class="download-btn btn btn-danger text-center wow tada">DOWNLOAD HERE</a>
             </div>
         </div>
     </section>
@@ -294,6 +295,13 @@
 <script src="./libs/jquery-3.4.1.min.js"></script>
 <script src="./libs/bootstrap.js"></script>
 <script src="./libs/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-beta.2/lazyload.js"></script>
+<script src="./libs/wow.min.js"></script>
 <script src="./js/smooth_scroll.js"></script>
+
+<script>
+    new WOW().init();
+</script>
+
 </body>
 </html>
