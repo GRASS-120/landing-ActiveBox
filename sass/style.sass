@@ -40,18 +40,49 @@ body
         height: 100px
         width: 100%
         border-bottom: 1px solid grey
-        display: flex
-        justify-content: space-between
+
+        &-scroll
+            transition: 2s all
+            position: absolute
+            opacity: 0
+            top: -1500px
+            height: 350px
+            left: 0
+
+            .header-list
+                padding-top: 27px
+                transition: 3s all
+
+            .header-title
+                padding-top: 25px
+                transition: 3s all
+
+        &-fixed
+            position: fixed
+            top: 0
+            left: 0
+            background-color: #292c47
+            border-bottom: none
+            z-index: 100
+            height: 75px
+            transition: 0.6s all
+            top: 0
+            opacity: 1
 
         &-title
             padding-top: 38px 
             height: 100%
+            float: left
 
         &-list
             padding-top: 38px 
             height: 100%
+            float: left
             display: flex
             justify-content: space-between
+
+            &-fixed
+                padding-top: 27px 
 
             &-item
                 padding-right: 55px
