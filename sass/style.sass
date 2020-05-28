@@ -12,11 +12,7 @@
     font-weight: $w
     color: $c
 
-// -/mixin- //
-
-// -animation- //
-
-// -/animation- //    
+// -/mixin- //    
     
 // -common- //
 
@@ -35,9 +31,55 @@ body
     background-image: url(../img/banner.jpg)
 
     .header
-        height: 100px
+        height: 75px
         width: 100%
         border-bottom: 1px solid grey
+
+        @media screen and (max-width: 1200px)
+            .header-title
+                padding-top: 25px
+
+            .header-list
+                padding-top: 27px 
+                float: right
+                display: flex
+
+                &-item
+                    padding-right: 20px
+
+        @media screen and (max-width: 995px)
+            .header-title
+                padding-top: 25px
+
+                img
+                    display: block
+                    margin: 0 auto
+
+            .header-title.col-md-4
+                    padding: 25px 0 
+
+            .header-list
+                padding-top: 27px 
+                float: rigth
+                display: flex
+                justify-content: center
+
+                &-item
+                    padding-right: 12px
+
+        @media screen and (max-width: 770px)
+            .header-title
+                padding-top: 25px 
+                float: left
+                margin: 0 auto
+
+            .header-list
+                padding-top: 27px 
+                float: right
+                display: flex
+
+                &-item
+                    padding-right: 15px
 
         &-scroll
             transition: 2s all
@@ -48,6 +90,16 @@ body
             left: 0
 
             .header-list
+                padding-top: 27px
+                transition: 3s all
+
+            .header-title
+                padding-top: 25px
+                transition: 3s all
+
+        @media screen and (max-width: 1200px)
+            .header-scroll
+                .header-list
                 padding-top: 27px
                 transition: 3s all
 
@@ -68,14 +120,14 @@ body
             opacity: 1
 
         &-title
-            padding-top: 38px 
+            padding-top: 25px 
             height: 100%
             float: left
 
         &-list
-            padding-top: 38px 
+            padding-top: 27px 
             height: 100%
-            float: left
+            float: right
             display: flex
             justify-content: space-between
 
@@ -103,6 +155,24 @@ body
     .masthead
         width: 90%
         margin: 135px auto
+
+        @media screen and (max-width: 1200px)
+            .masthead-title
+                font-size: 55px
+
+            .masthead-subtitle
+                font-size: 18px
+
+        @media screen and (max-width: 770px)
+            .masthead-title
+                width: 100%
+                font-size: 40px
+
+            .masthead-subtitle
+                margin-top: 15px
+                font-size: 16px
+                
+
         &-title
             font-size: 65px
             font-weight: bold
@@ -127,21 +197,22 @@ body
 
 .features
     width: 100%
-    height: 460px
+    height: auto
     margin-top: 120px
     margin-bottom: 120px
 
-    div
-        .features-line-1
-            margin-bottom: 60px
-
-        .features-line-1, .features-line-2
+    div 
+        .features-line
             display: flex
-            justify-content: center
+            justify-content: space-around
+            flex-wrap: wrap
+
 
             .features-item
                 height: 200px
-                width: 33%
+                width: 30%
+                margin-bottom: 45px
+
 
                 &-text
                     width: 100%
@@ -149,6 +220,7 @@ body
                     float: left
 
                     p
+                        text-align: center
                         @include text(13px, regular, #333)
 
                 &-title
@@ -163,13 +235,21 @@ body
                     img
                         display: block
                         margin: 0 auto
+                        
+            @media screen and (max-width: 770px)
+                .features-item
+                    // width: 50%
+                    margin-bottom: 100px
 
+    @media screen and (max-width: 770px)
+        .features
+            height: 550px
 // -/features- //
 
 // -works //
 
 .works
-    height: 700px
+    height: auto
     width: 100%
     margin-bottom: 100px
     display: flex
@@ -188,7 +268,7 @@ body
         @for $i from 1 to 9
             .works-item-#{$i}
                 width: 100%
-                height: 100%
+                height: 350px
                 transition: 0.5s
                 background-image: url(../img/work-#{$i}.jpg)
 
@@ -205,7 +285,12 @@ body
                         width: 100%
                         height: 100%
                         transition: 0.3s
-                        padding-top: 8.5vw
+                        padding-top: 35%
+
+    @media (max-width: 770px)
+        div
+            width: 50%
+
 
 // -/works //
 
@@ -219,13 +304,15 @@ body
     div
         display: flex
         justify-content: space-between
+        // flex-wrap: wrap
 
         .teamate
-            width: 23.5%
+            width: 20%
             height: 580px
             display: flex
             flex-direction: column
             justify-content: space-between
+            // flext-wrap: wrap
 
             &-photo
                 width: 100%
@@ -271,13 +358,33 @@ body
                        width: 50%
                        height: 50%
 
+
+        @media (max-width: 770px)
+            .teamate
+                width: 23.5%
+
+                &-photo
+                    height: 150px
+
+                &-shortinf
+                    &-name
+                        @include text(15px, regular, #333)
+                        text-align: center
+                    
+                    &-job
+                        @include text(9px, regular, #E84545)
+                        text-align: center
+
+                &-inf
+                    @include text(13px, regular, #333)
+
 // -/team- //
 
 // -clients- //
 
 .clients
     width: 100%
-    height: 500px
+    height: 550px
     margin-bottom: 100px
     display: flex
     background-color: #53354A
@@ -302,6 +409,32 @@ body
 
         &-author
             @include text(13px, bold, white)
+
+    @media screen and (max-width: 1200px)
+        .clients-comment
+            margin: 65px 0 50px 55px
+
+@media screen and (max-width: 770px)
+    .clients
+        display: block
+
+        &-img
+            height: 100%
+            width: 100%
+            float: left
+
+        &-comment
+            height: 100%
+            width: 85%
+            margin: 100px 0 50px 55px
+            // float: left
+
+            &-text
+                @include text(24px, light, white)
+
+            &-author
+                @include text(10px, bold, white)
+
 
 // -/clients //
 
